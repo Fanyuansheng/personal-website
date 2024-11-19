@@ -1,0 +1,10 @@
+personal-website/
+├── index.html
+├── styles/
+│   └── main.css
+├── js/
+│   ├── main.js
+│   ├── gallery.js
+│   └── blog.js
+└── assets/
+    └── images/ 

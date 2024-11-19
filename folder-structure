@@ -1,0 +1,16 @@
+/Users/fanyuansheng/Desktop/nice/
+├── index.html
+├── styles/
+│   └── main.css
+├── js/
+│   ├── main.js
+│   ├── gallery.js
+│   ├── blog.js
+│   ├── theme.js
+│   ├── language.js
+│   ├── scroll.js
+│   └── backToTop.js
+└── assets/
+    └── images/
+        ├── image1.png
+        └── image2.png

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>范远生的个人网站</title>
+    <link rel="icon" href="https://fanyuansheng.top/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="https://fanyuansheng.top/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- 添加 Font Awesome 图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- 在 head 标签中更新 EmailJS 配置 -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("acUBKqHIfwSMgiSka");  // 使用你的 Public Key
+        })();
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="nav-links">
+            <div class="logo">
+                <img src="https://fanyuansheng.top/img/favicon.ico" alt="网站图标">
+            </div>
+            <div class="nav-menu">
+                <a href="#home" data-lang-cn="首页" data-lang-en="Home">首页</a>
+                <a href="#gallery" data-lang-cn="照片展示" data-lang-en="Gallery">照片展示</a>
+                <a href="#projects" data-lang-cn="开源项目" data-lang-en="Projects">开源项目</a>
+                <a href="#blog" data-lang-cn="博客" data-lang-en="Blog">博客</a>
+                <a href="#contact" data-lang-cn="联系我" data-lang-en="Contact">联系我</a>
+            </div>
+            <div class="nav-controls">
+                <button id="lang-toggle" class="lang-toggle">
+                    <span class="lang-text">中文</span>
+                    <i class="fas fa-language"></i>
+                </button>
+                <button id="theme-toggle" class="theme-toggle">
+                    <span class="theme-text">夜间模式</span>
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div id="canvas-container"></div>
+    
+    <section id="gallery" class="section">
+        <h2>照片展示</h2>
+        <div id="gallery-container"></div>
+    </section>
+
+    <section id="projects" class="section">
+        <h2>开源项目</h2>
+        <div id="projects-container" class="projects-grid">
+            <!-- 项目卡片将通过 JavaScript 动态添加 -->
+        </div>
+    </section>
+
+    <section id="blog" class="section">
+        <h2>博客文章</h2>
+        <div id="blog-container"></div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>联系我</h2>
+        <div class="contact-container">
+            <form id="contact-form" class="contact-form">
+                <input type="text" placeholder="您的姓名" required>
+                <input type="email" placeholder="您的邮箱" required>
+                <textarea placeholder="请输入您的留言" required></textarea>
+                <button type="submit">发送消息</button>
+            </form>
+            
+            <div class="social-links">
+                <a href="https://github.com/Fanyuansheng" class="social-link" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="social-link" target="_blank">
+                    <i class="fab fa-weixin"></i>
+                </a>
+                <a href="#" class="social-link" target="_blank">
+                    <i class="fab fa-weibo"></i>
+                </a>
+                <a href="#" class="social-link" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <button id="back-to-top" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 data-translate="about">关于我</h3>
+                <p data-translate="aboutMe">热爱编程与设计的开发者，专注于创造优秀的用户体验。</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3 data-translate="quickLinks">快速链接</h3>
+                <ul>
+                    <li><a href="#home">首页</a></li>
+                    <li><a href="#gallery">照片展示</a></li>
+                    <li><a href="#projects">开源项目</a></li>
+                    <li><a href="#blog">博客</a></li>
+                    <li><a href="#contact">联系我</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3 data-translate="contactInfo">联系方式</h3>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> email@example.com</li>
+                    <li><i class="fas fa-phone"></i> +86 123 4567 8900</li>
+                    <li><i class="fas fa-map-marker-alt"></i> 中国，北京</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-info">
+                <p>&copy; 2024 我的个人网站. 保留所有权利.</p>
+                <p class="icp">
+                    <a href="https://beian.miit.gov.cn/" target="_blank">
+                        <img src="assets/images/icp.png" alt="ICP图标">
+                        陕ICP备2021014409号
+                    </a>
+                </p>
+            </div>
+            <div class="footer-notice">
+                <p data-translate="notice">注意事项：</p>
+                <ul>
+                    <li>本网站所有内容仅代表个人观点</li>
+                    <li>转载请注明出处，保留原作者信息</li>
+                    <li>如有侵权请联系我们删除</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- 确保 theme.js 在其他脚本之前加载 -->
+    <script src="js/theme.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/blog.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/backToTop.js"></script>
+    <script src="js/language.js"></script>
+    <!-- 在其他脚本之后添加 contact.js -->
+    <script src="js/contact.js"></script>
+</body>
+</html>
